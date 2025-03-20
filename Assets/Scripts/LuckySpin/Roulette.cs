@@ -15,6 +15,9 @@ namespace LuckySpin
         [SerializeField] 
         private Range _animationSpeedMultiplierRange;
 
+        [SerializeField] 
+        private Arrow _arrow;
+
         private float _speedMultiplier;
         private float _currentSpeedMultiplier;
         private float _animationDuration;
@@ -43,6 +46,11 @@ namespace LuckySpin
             _currentSpeedMultiplier = Mathf.Lerp(_speedMultiplier, 0, _elapsedTime / _animationDuration);
         
             _wheelAnimator.SetFloat(SpeedMultiplier, _currentSpeedMultiplier);
+
+            if (_currentSpeedMultiplier == 0)
+            {
+                Debug.Log($"Your prize: {_arrow.PrizeName}");
+            }
         }
     }
 }
