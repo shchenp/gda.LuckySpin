@@ -14053,6 +14053,7 @@ GameObject:
   - component: {fileID: 1786034420}
   - component: {fileID: 1786034422}
   - component: {fileID: 1786034421}
+  - component: {fileID: 1786034423}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -14117,6 +14118,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786034419}
   m_CullTransparentMesh: 1
+--- !u!95 &1786034423
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786034419}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f6d2c761395f0f34c97430748191ac46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1794502909
 PrefabInstance:
   m_ObjectHideFlags: 0
