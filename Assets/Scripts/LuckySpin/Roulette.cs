@@ -1,56 +1,19 @@
-using Extensions;
+using System;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace LuckySpin
 {
     public class Roulette : MonoBehaviour
     {
-        [SerializeField] 
-        private Animator _wheelAnimator;
-    
-        [SerializeField]
-        private Range _animationDurationRange;
+        public event Action<PrizeData> OnGetPrize;
+        
+        [SerializeField] private Arrow _arrow;
 
-        [SerializeField] 
-        private Range _animationSpeedMultiplierRange;
-
-        [SerializeField] 
-        private Arrow _arrow;
-
-        private float _speedMultiplier;
-        private float _currentSpeedMultiplier;
-        private float _animationDuration;
-        private float _elapsedTime;
-        private static readonly int SpeedMultiplier = Animator.StringToHash("speedMultiplier");
-
-        public void StartRotateWheel()
+        public void GetPrize()
         {
-            _elapsedTime = 0;
-            _speedMultiplier = Random.Range(_animationSpeedMultiplierRange.Min, _animationSpeedMultiplierRange.Max);
-            _currentSpeedMultiplier = _speedMultiplier;
+            var prize = _arrow.PrizeObject.GetComponent<PrizeData>();
             
-            _animationDuration = Random.Range(_animationDurationRange.Min, _animationDurationRange.Max);
-        
-            _wheelAnimator.SetFloat(SpeedMultiplier, _currentSpeedMultiplier);
-        }
-
-        private void Update()
-        {
-            if (_currentSpeedMultiplier <= 0)
-            {
-                return;
-            }
-
-            _elapsedTime += Time.deltaTime;
-            _currentSpeedMultiplier = Mathf.Lerp(_speedMultiplier, 0, _elapsedTime / _animationDuration);
-        
-            _wheelAnimator.SetFloat(SpeedMultiplier, _currentSpeedMultiplier);
-
-            if (_currentSpeedMultiplier == 0)
-            {
-                Debug.Log($"Your prize: {_arrow.PrizeName}");
-            }
+            OnGetPrize?.Invoke(prize);
         }
     }
 }

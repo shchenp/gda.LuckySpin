@@ -1,10 +1,10 @@
-using LuckySpin;
 using TMPro;
 using UnityEngine;
+using Screen = Extensions.Screen;
 
-namespace Extensions
+namespace LuckySpin
 {
-    public class LuckySpinScreen : Screen
+    public class LuckySpinScreenView : Screen
     {
         [SerializeField] private Token _token;
         [SerializeField] private TextMeshProUGUI _tokenCount;

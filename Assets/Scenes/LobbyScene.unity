@@ -3605,16 +3605,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 395147619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: becd35e19ef17484dad3673e9eae335e, type: 3}
+  m_Script: {fileID: 11500000, guid: fe89e8d5ef6d49f29727c16d81c824d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wheelAnimator: {fileID: 654900573}
-  _animationDurationRange:
-    <Min>k__BackingField: 3
-    <Max>k__BackingField: 7
-  _animationSpeedMultiplierRange:
-    <Min>k__BackingField: 2
-    <Max>k__BackingField: 5
   _arrow: {fileID: 141746490}
 --- !u!1001 &408569461
 PrefabInstance:
@@ -6222,6 +6215,7 @@ GameObject:
   - component: {fileID: 654900572}
   - component: {fileID: 654900571}
   - component: {fileID: 654900573}
+  - component: {fileID: 654900574}
   m_Layer: 5
   m_Name: Wheel
   m_TagString: Untagged
@@ -6308,6 +6302,40 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &654900574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654900569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: becd35e19ef17484dad3673e9eae335e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnWheelStopped:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 395147621}
+        m_TargetAssemblyTypeName: LuckySpin.Roulette, Assembly-CSharp
+        m_MethodName: GetPrize
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _wheelAnimator: {fileID: 654900573}
+  _animationDurationRange:
+    <Min>k__BackingField: 3
+    <Max>k__BackingField: 7
+  _animationSpeedMultiplierRange:
+    <Min>k__BackingField: 2
+    <Max>k__BackingField: 5
 --- !u!1 &656616121
 GameObject:
   m_ObjectHideFlags: 0
@@ -8296,6 +8324,7 @@ GameObject:
   - component: {fileID: 996864178}
   - component: {fileID: 996864177}
   - component: {fileID: 996864179}
+  - component: {fileID: 996864180}
   m_Layer: 5
   m_Name: PrizeView
   m_TagString: Untagged
@@ -8386,6 +8415,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &996864180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996864175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35ac3c7b2cf41ae9d84094b3fa9e370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: {fileID: 1134269124}
+  _image: {fileID: 2136955793}
+  _count: {fileID: 1817348991}
+  _animator: {fileID: 996864179}
 --- !u!224 &1007537425 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5639731139891273143, guid: f0c447c903204449b9318e814292bf28, type: 3}
@@ -8722,7 +8767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1047283567
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12796,7 +12841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _heroSelectionScreen: {fileID: 920353772}
   _lobbyScreen: {fileID: 210751825}
-  _luckySpinScreen: {fileID: 1884191990}
+  _luckySpinScreenView: {fileID: 1884191990}
 --- !u!4 &1595216316
 Transform:
   m_ObjectHideFlags: 0
@@ -14711,8 +14756,8 @@ MonoBehaviour:
           m_StringArgument: Play
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 395147621}
-        m_TargetAssemblyTypeName: Roulette, Assembly-CSharp
+      - m_Target: {fileID: 654900574}
+        m_TargetAssemblyTypeName: LuckySpin.Wheel, Assembly-CSharp
         m_MethodName: StartRotateWheel
         m_Mode: 1
         m_Arguments:
@@ -15183,6 +15228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884191989}
   - component: {fileID: 1884191990}
+  - component: {fileID: 1884191991}
   m_Layer: 5
   m_Name: LuckySpinScreen
   m_TagString: Untagged
@@ -15235,6 +15281,20 @@ MonoBehaviour:
   _diamonds: {fileID: 248473302}
   _token: {fileID: 473678327}
   _tokenCount: {fileID: 141117936}
+--- !u!114 &1884191991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884191988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1fe64bcd08c4c2db94af0038f054ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _roulette: {fileID: 395147621}
+  _prizePresenter: {fileID: 996864180}
 --- !u!1 &1884853797
 GameObject:
   m_ObjectHideFlags: 0

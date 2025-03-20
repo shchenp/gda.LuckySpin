@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1927971988614425238}
   - component: {fileID: 2080691019394284507}
   - component: {fileID: 6683906095997354170}
+  - component: {fileID: -5149337011206460741}
   m_Layer: 5
   m_Name: Coin
   m_TagString: Untagged
@@ -122,3 +123,18 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &-5149337011206460741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8365171732240447665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a49eac72b94fa980041494fc8f9482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Coins!
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 2340e003a4a6745a8929491f3b365cea, type: 3}
+  <Count>k__BackingField: 50
