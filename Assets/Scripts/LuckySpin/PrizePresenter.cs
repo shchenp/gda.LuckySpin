@@ -1,11 +1,16 @@
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace LuckySpin
 {
     public class PrizePresenter : MonoBehaviour
     {
+        public UnityEvent AnimationStart;
+        public UnityEvent AnimationEnd;
+        
         [SerializeField] private TextMeshProUGUI _name;
         [SerializeField] private Image _image;
         [SerializeField] private TextMeshProUGUI _count;
@@ -19,6 +24,18 @@ namespace LuckySpin
             _count.text = prizeData.Count;
             
             _animator.SetTrigger(Play);
+        }
+
+        [UsedImplicitly]
+        public void OnAnimationStart()
+        {
+            AnimationStart?.Invoke();
+        }
+
+        [UsedImplicitly]
+        public void OnAnimationEnd()
+        {
+            AnimationEnd?.Invoke();
         }
     }
 }
