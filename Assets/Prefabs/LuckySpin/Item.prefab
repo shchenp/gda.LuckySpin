@@ -110,7 +110,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 4.1
+  m_EdgeRadius: 1.1
   m_Points:
   - {x: -56.5, y: 28.5}
   - {x: -0.35826492, y: 40.263763}
@@ -135,3 +135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89a49eac72b94fa980041494fc8f9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Sprite>k__BackingField: {fileID: 0}
+  <Count>k__BackingField: 
