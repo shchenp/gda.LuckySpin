@@ -9,7 +9,8 @@ namespace LuckySpin
     public class PrizePresenter : MonoBehaviour
     {
         public UnityEvent AnimationStart;
-        public UnityEvent AnimationEnd;
+        public UnityEvent MoveToChestAlmostDoneEvent;
+        public UnityEvent MoveToChestDoneEvent;
         
         [SerializeField] private TextMeshProUGUI _name;
         [SerializeField] private Image _image;
@@ -33,9 +34,15 @@ namespace LuckySpin
         }
 
         [UsedImplicitly]
-        public void OnAnimationEnd()
+        public void OnMoveToChestAlmostDone()
         {
-            AnimationEnd?.Invoke();
+            MoveToChestAlmostDoneEvent?.Invoke();
+        }
+
+        [UsedImplicitly]
+        public void OnMoveToChestDone()
+        {
+            MoveToChestDoneEvent?.Invoke();
         }
     }
 }
