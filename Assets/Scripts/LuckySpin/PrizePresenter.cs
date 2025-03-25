@@ -1,3 +1,4 @@
+using Extensions;
 using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
@@ -17,12 +18,19 @@ namespace LuckySpin
         [SerializeField] private TextMeshProUGUI _count;
         [SerializeField] private Animator _animator;
         private static readonly int Play = Animator.StringToHash("play");
+        private static readonly int Skull = Animator.StringToHash("skull");
 
         public void Show(PrizeData prizeData)
         {
             _name.text = prizeData.Name;
             _image.sprite = prizeData.Sprite;
             _count.text = prizeData.Count;
+
+            if (prizeData.CompareTag(GlobalConstants.SKULL_TAG))
+            {
+                _animator.SetTrigger(Skull);
+                return;
+            }
             
             _animator.SetTrigger(Play);
         }
