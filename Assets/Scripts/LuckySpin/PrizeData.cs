@@ -11,6 +11,6 @@ namespace LuckySpin
         public Sprite Sprite { get; private set; }
         
         [field: SerializeField]
-        public string Count { get; private set; }
+        public int Count { get; private set; }
     }
 }

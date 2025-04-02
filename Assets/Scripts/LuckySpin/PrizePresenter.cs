@@ -24,7 +24,7 @@ namespace LuckySpin
         {
             _name.text = prizeData.Name;
             _image.sprite = prizeData.Sprite;
-            _count.text = prizeData.Count;
+            _count.text = prizeData.Count.ToString();
 
             if (prizeData.CompareTag(GlobalConstants.SKULL_TAG))
             {
