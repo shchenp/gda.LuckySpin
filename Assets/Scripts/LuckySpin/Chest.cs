@@ -19,12 +19,19 @@ namespace LuckySpin
 
         public void AddPrize(PrizeData prizeData)
         {
-            if (prizeData.CompareTag(GlobalConstants.SKULL_TAG))
+            switch (prizeData.tag)
             {
-                return;
+                case GlobalConstants.SKULL_TAG:
+                    return;
+                
+                case GlobalConstants.RUNE_TAG:
+                    Prizes[prizeData.tag]++;
+                    return;
+                
+                default:
+                    Prizes[prizeData.tag] += Convert.ToInt32(prizeData.Count);
+                    return;
             }
-
-            Prizes[prizeData.tag] += prizeData.Count;
         }
     }
 }

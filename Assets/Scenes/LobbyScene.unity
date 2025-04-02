@@ -4526,6 +4526,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1786034425}
+        m_TargetAssemblyTypeName: LuckySpin.ChestView, Assembly-CSharp
+        m_MethodName: OnTokensOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _count: 3
 --- !u!1 &487501657
 GameObject:
@@ -14167,6 +14179,8 @@ GameObject:
   - component: {fileID: 1786034421}
   - component: {fileID: 1786034423}
   - component: {fileID: 1786034424}
+  - component: {fileID: 1786034425}
+  - component: {fileID: 1786034426}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -14183,14 +14197,14 @@ RectTransform:
   m_GameObject: {fileID: 1786034419}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.41666657, y: 0.41666657, z: 0.41666657}
+  m_LocalScale: {x: 0.41666657, y: 0.4166666, z: 0.4166666}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1877968419}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -40.5, y: -69.21}
   m_SizeDelta: {x: 330, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1786034421
@@ -14264,6 +14278,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41359b5a9dd8de4da5bf99324df763c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1786034425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786034419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7068062c194ce5b4470f5b90b8fd07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimationStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1047283570}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: dim
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1877968419}
+        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
+        m_MethodName: SetAsLastSibling
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: dim
+          m_BoolArgument: 0
+        m_CallState: 2
+  _animator: {fileID: 1786034423}
+--- !u!114 &1786034426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786034419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 1
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1001 &1794502909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15153,7 +15227,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: -181
     m_Right: 0
-    m_Top: -77
+    m_Top: -174
     m_Bottom: 0
   m_ChildAlignment: 4
   m_Spacing: -58.79
