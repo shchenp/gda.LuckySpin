@@ -2016,6 +2016,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coins: {fileID: 1664938820}
   _diamonds: {fileID: 263132317}
+  _coinsAnimator: {fileID: 0}
+  _diamondsAnimator: {fileID: 0}
   _playerName: {fileID: 429317202}
   _level: {fileID: 1705578480}
   _experience: {fileID: 163064019}
@@ -2106,6 +2108,7 @@ GameObject:
   - component: {fileID: 218932151}
   - component: {fileID: 218932150}
   - component: {fileID: 218932149}
+  - component: {fileID: 218932152}
   m_Layer: 0
   m_Name: Diamonds
   m_TagString: Untagged
@@ -2193,6 +2196,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218932147}
   m_CullTransparentMesh: 1
+--- !u!114 &218932152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218932147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67601665cc804e7c832570940d06f216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 248473302}
+  _duration: 1
 --- !u!1 &224815189
 GameObject:
   m_ObjectHideFlags: 0
@@ -7765,6 +7782,18 @@ MonoBehaviour:
           m_StringArgument: fade
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 944211661}
+        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
+        m_MethodName: AddPrizes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &835934144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8194,6 +8223,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coins: {fileID: 1510534276}
   _diamonds: {fileID: 2103160675}
+  _coinsAnimator: {fileID: 0}
+  _diamondsAnimator: {fileID: 0}
   _playerName: {fileID: 72472293}
   _heroName: {fileID: 752029519}
   _level: {fileID: 1932331273}
@@ -8377,6 +8408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coins: 10000
   _diamonds: 100
+  _chest: {fileID: 1786034424}
 --- !u!4 &944211662
 Transform:
   m_ObjectHideFlags: 0
@@ -12229,6 +12261,7 @@ GameObject:
   - component: {fileID: 1479154967}
   - component: {fileID: 1479154969}
   - component: {fileID: 1479154968}
+  - component: {fileID: 1479154970}
   m_Layer: 0
   m_Name: Coins
   m_TagString: Untagged
@@ -12296,6 +12329,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479154966}
   m_CullTransparentMesh: 1
+--- !u!114 &1479154970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479154966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67601665cc804e7c832570940d06f216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 1353943497}
+  _duration: 1
 --- !u!1 &1492357651
 GameObject:
   m_ObjectHideFlags: 0
@@ -15672,6 +15719,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coins: {fileID: 1353943497}
   _diamonds: {fileID: 248473302}
+  _coinsAnimator: {fileID: 1479154970}
+  _diamondsAnimator: {fileID: 218932152}
   _token: {fileID: 473678327}
   _tokenCount: {fileID: 141117936}
 --- !u!114 &1884191991

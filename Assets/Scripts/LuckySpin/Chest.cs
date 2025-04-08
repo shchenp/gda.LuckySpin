@@ -33,5 +33,10 @@ namespace LuckySpin
                     return;
             }
         }
+
+        public Dictionary<string, int> GetPrizes()
+        {
+            return Prizes;
+        }
     }
 }

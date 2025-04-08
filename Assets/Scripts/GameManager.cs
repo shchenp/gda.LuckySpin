@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
    private void Awake()
    {
        _playerManager.OnCoinsChanged += _screenManager.SetCoins;
+       _playerManager.OnCoinsAdd += _screenManager.LuckySpinScreenView.SetCoinsAdditive;
        _playerManager.OnDiamondsChanged += _screenManager.SetDiamonds;
+       _playerManager.OnDiamondsAdd += _screenManager.LuckySpinScreenView.SetDiamondsAdditive;
 
        _heroManager.SetHeroStats += _screenManager.HeroSelectionScreen.SetStats;
        
@@ -27,7 +29,9 @@ public class GameManager : MonoBehaviour
    private void OnDestroy()
    {
        _playerManager.OnCoinsChanged -= _screenManager.SetCoins;
+       _playerManager.OnCoinsAdd -= _screenManager.LuckySpinScreenView.SetCoinsAdditive;
        _playerManager.OnDiamondsChanged -= _screenManager.SetDiamonds;
+       _playerManager.OnDiamondsAdd -= _screenManager.LuckySpinScreenView.SetDiamondsAdditive;
        
        _heroManager.SetHeroStats -= _screenManager.HeroSelectionScreen.SetStats;
        
