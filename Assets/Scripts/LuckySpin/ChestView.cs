@@ -1,4 +1,6 @@
+using Extensions;
 using JetBrains.Annotations;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -11,6 +13,12 @@ namespace LuckySpin
         
         [SerializeField] 
         private Animator _animator;
+
+        [SerializeField] private Chest _chest;
+        [SerializeField] private TextMeshProUGUI _cointCount;
+        [SerializeField] private TextMeshProUGUI _gemsCount;
+        [SerializeField] private TextMeshProUGUI _runeCount;
+        [SerializeField] private TextMeshProUGUI _lifeCount;
 
         private static readonly int IsTokensOut = Animator.StringToHash("isTokensOut");
         private static readonly int Clicked = Animator.StringToHash("clicked");
@@ -29,6 +37,15 @@ namespace LuckySpin
         public void OnPointerClick(PointerEventData eventData)
         {
             _animator.SetTrigger(Clicked);
+        }
+
+        [UsedImplicitly]
+        private void SetPrizesCounts()
+        {
+            _cointCount.text = _chest.Prizes[GlobalConstants.COIN_TAG].ToString();
+            _gemsCount.text = _chest.Prizes[GlobalConstants.GEM_TAG].ToString();
+            _runeCount.text = _chest.Prizes[GlobalConstants.RUNE_TAG].ToString();
+            _lifeCount.text = _chest.Prizes[GlobalConstants.LIFE_TAG].ToString();
         }
     }
 }
