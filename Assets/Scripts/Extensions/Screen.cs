@@ -6,9 +6,9 @@ namespace Extensions
     public class Screen : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _coins;
-        [SerializeField] private TextMeshProUGUI _diamonds;
+        [SerializeField] private TextMeshProUGUI _gems;
         [SerializeField] private NumberAnimator _coinsAnimator;
-        [SerializeField] private NumberAnimator _diamondsAnimator;
+        [SerializeField] private NumberAnimator _gemsAnimator;
 
         public void SetCoins(int coins)
         {
@@ -20,14 +20,14 @@ namespace Extensions
             _coinsAnimator.AnimateNumber(additive);
         }
 
-        public void SetDiamonds(int diamonds)
+        public void SetGems(int diamonds)
         {
-            _diamonds.text = diamonds.ToString();
+            _gems.text = diamonds.ToString();
         }
 
-        public void SetDiamondsAdditive(int additive)
+        public void SetGemsAdditive(int additive)
         {
-            _diamondsAnimator.AnimateNumber(additive);
+            _gemsAnimator.AnimateNumber(additive);
         }
     }
 }

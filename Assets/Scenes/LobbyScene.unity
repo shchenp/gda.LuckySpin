@@ -2015,9 +2015,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coins: {fileID: 1664938820}
-  _diamonds: {fileID: 263132317}
+  _gems: {fileID: 263132317}
   _coinsAnimator: {fileID: 0}
-  _diamondsAnimator: {fileID: 0}
+  _gemsAnimator: {fileID: 0}
   _playerName: {fileID: 429317202}
   _level: {fileID: 1705578480}
   _experience: {fileID: 163064019}
@@ -2110,7 +2110,7 @@ GameObject:
   - component: {fileID: 218932149}
   - component: {fileID: 218932152}
   m_Layer: 0
-  m_Name: Diamonds
+  m_Name: Gems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2490,7 +2490,7 @@ GameObject:
   - component: {fileID: 248473303}
   - component: {fileID: 248473302}
   m_Layer: 0
-  m_Name: DiamondsCount
+  m_Name: GemsCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2781,7 +2781,7 @@ GameObject:
   - component: {fileID: 263132318}
   - component: {fileID: 263132317}
   m_Layer: 0
-  m_Name: DiamondsCount
+  m_Name: GemsCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5455,7 +5455,7 @@ GameObject:
   - component: {fileID: 590600967}
   - component: {fileID: 590600966}
   m_Layer: 0
-  m_Name: Diamonds
+  m_Name: Gems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8222,9 +8222,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coins: {fileID: 1510534276}
-  _diamonds: {fileID: 2103160675}
+  _gems: {fileID: 2103160675}
   _coinsAnimator: {fileID: 0}
-  _diamondsAnimator: {fileID: 0}
+  _gemsAnimator: {fileID: 0}
   _playerName: {fileID: 72472293}
   _heroName: {fileID: 752029519}
   _level: {fileID: 1932331273}
@@ -8407,7 +8407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coins: 10000
-  _diamonds: 100
+  _gems: 100
   _chest: {fileID: 1786034424}
 --- !u!4 &944211662
 Transform:
@@ -11764,7 +11764,7 @@ GameObject:
   - component: {fileID: 1425928514}
   - component: {fileID: 1425928513}
   m_Layer: 0
-  m_Name: Diamonds
+  m_Name: Gems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15718,9 +15718,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coins: {fileID: 1353943497}
-  _diamonds: {fileID: 248473302}
+  _gems: {fileID: 248473302}
   _coinsAnimator: {fileID: 1479154970}
-  _diamondsAnimator: {fileID: 218932152}
+  _gemsAnimator: {fileID: 218932152}
   _token: {fileID: 473678327}
   _tokenCount: {fileID: 141117936}
 --- !u!114 &1884191991
@@ -16913,7 +16913,7 @@ GameObject:
   - component: {fileID: 2103160676}
   - component: {fileID: 2103160675}
   m_Layer: 0
-  m_Name: DiamondsCount
+  m_Name: GemsCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

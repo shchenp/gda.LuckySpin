@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
    {
        _playerManager.OnCoinsChanged += _screenManager.SetCoins;
        _playerManager.OnCoinsAdd += _screenManager.LuckySpinScreenView.SetCoinsAdditive;
-       _playerManager.OnDiamondsChanged += _screenManager.SetDiamonds;
-       _playerManager.OnDiamondsAdd += _screenManager.LuckySpinScreenView.SetDiamondsAdditive;
+       _playerManager.OnGemsChanged += _screenManager.SetGems;
+       _playerManager.OnGemsAdd += _screenManager.LuckySpinScreenView.SetGemsAdditive;
 
        _heroManager.SetHeroStats += _screenManager.HeroSelectionScreen.SetStats;
        
@@ -30,8 +30,8 @@ public class GameManager : MonoBehaviour
    {
        _playerManager.OnCoinsChanged -= _screenManager.SetCoins;
        _playerManager.OnCoinsAdd -= _screenManager.LuckySpinScreenView.SetCoinsAdditive;
-       _playerManager.OnDiamondsChanged -= _screenManager.SetDiamonds;
-       _playerManager.OnDiamondsAdd -= _screenManager.LuckySpinScreenView.SetDiamondsAdditive;
+       _playerManager.OnGemsChanged -= _screenManager.SetGems;
+       _playerManager.OnGemsAdd -= _screenManager.LuckySpinScreenView.SetGemsAdditive;
        
        _heroManager.SetHeroStats -= _screenManager.HeroSelectionScreen.SetStats;
        

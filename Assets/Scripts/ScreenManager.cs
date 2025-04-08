@@ -21,10 +21,10 @@ public class ScreenManager : MonoBehaviour
         _luckySpinScreenView.SetCoins(coins);
     }
 
-    public void SetDiamonds(int diamonds)
+    public void SetGems(int diamonds)
     {
-        _lobbyScreen.SetDiamonds(diamonds);
-        _heroSelectionScreen.SetDiamonds(diamonds);
-        _luckySpinScreenView.SetDiamonds(diamonds);
+        _lobbyScreen.SetGems(diamonds);
+        _heroSelectionScreen.SetGems(diamonds);
+        _luckySpinScreenView.SetGems(diamonds);
     }
 }

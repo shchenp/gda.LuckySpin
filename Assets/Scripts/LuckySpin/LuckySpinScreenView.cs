@@ -23,10 +23,5 @@ namespace LuckySpin
         {
             _tokenCount.text = tokenCount.ToString();
         }
-
-        public void SetStats(HeroStats heroStats)
-        {
-            
-        }
     }
 }

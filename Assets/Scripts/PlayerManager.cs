@@ -7,13 +7,13 @@ public class PlayerManager : MonoBehaviour
 {
     public event Action<int> OnCoinsChanged;
     public event Action<int> OnCoinsAdd; 
-    public event Action<int> OnDiamondsChanged;
-    public event Action<int> OnDiamondsAdd; 
+    public event Action<int> OnGemsChanged;
+    public event Action<int> OnGemsAdd; 
     
     [SerializeField] 
     private int _coins;
     [SerializeField]
-    private int _diamonds;
+    private int _gems;
     [SerializeField] 
     private Chest _chest;
 
@@ -22,7 +22,7 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         OnCoinsChanged?.Invoke(_coins);
-        OnDiamondsChanged?.Invoke(_diamonds);
+        OnGemsChanged?.Invoke(_gems);
     }
 
     public void SetHero(HeroStats hero)
@@ -47,6 +47,6 @@ public class PlayerManager : MonoBehaviour
         var gems = _chest.Prizes[GlobalConstants.GEM_TAG];
         
         OnCoinsAdd?.Invoke(coins);
-        OnDiamondsAdd?.Invoke(gems);
+        OnGemsAdd?.Invoke(gems);
     }
 }
